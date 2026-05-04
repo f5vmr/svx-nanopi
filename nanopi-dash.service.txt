@@ -1,0 +1,16 @@
+[Unit]
+Description=SVXLink SvxLink Builder
+After=network.target
+[Service]
+StandardOutput=journal
+StandardError=journal
+Restart=ALWAYS
+RestartSec=5
+ExecReleoad=/bin/kill -HUP
+TimeoutStopSec=10
+Type=simple
+User=svxlink
+Group=svxlink
+ExecStart=/usr/bin/python3 /opt/app.py
+[Install]
+WantedBy=multi-user.target
