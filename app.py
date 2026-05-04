@@ -8,7 +8,7 @@ app = Flask(__name__)
 # In production, the live configuration file is at /etc/svxlink/svxlink.conf
 # Permissions on that file/location are svxlink:svxlink with mode 0765.
 # If the webserver owns/accesses the file, it should run as svxlink:svxlink too.
-CONFIG_FILE = 'svxlink.conf'
+CONFIG_FILE = '/etc/svxlink/svxlink.conf'
 
 # Standard CTCSS frequencies
 CTCSS_FREQUENCIES = [
