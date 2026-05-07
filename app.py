@@ -372,7 +372,7 @@ def setup():
             else:
                 tone_value = 'NONE'
 
-            set_kv(config, 'GLOBAL', 'COURTESY_TONE', tone_value, enabled=True)
+            #set_kv(config, 'GLOBAL', 'COURTESY_TONE', tone_value, enabled=True)
 
             save_config(CONFIG_FILE, config)
             sync_event_files()
