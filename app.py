@@ -369,12 +369,14 @@ def setup():
             if node_type == 'simplex':
                 set_kv(config, 'GLOBAL', 'LOGICS', 'SimplexLogic', enabled=True)
                 set_kv(config, 'ReflectorLogic', 'CONNECT_LOGICS', 'SimplexLogic', enabled=True)
+                set_kv(config, 'ReflectorLink', 'CONNECT_LOGICS', 'SimplexLogic:9,ReflectorLogic', enabled=True)
                 set_section_enabled(config, 'SimplexLogic', True)
                 set_section_enabled(config, 'RepeaterLogic', False)
                 set_kv(config, 'SimplexLogic', 'CALLSIGN', callsign, enabled=True)
             elif node_type == 'repeater':
                 set_kv(config, 'GLOBAL', 'LOGICS', 'RepeaterLogic', enabled=True)
                 set_kv(config, 'ReflectorLogic', 'CONNECT_LOGICS', 'RepeaterLogic', enabled=True)
+                set_kv(config, 'ReflectorLink', 'CONNECT_LOGICS', 'RepeaterLogic:9,ReflectorLogic', enabled=True)
                 set_section_enabled(config, 'RepeaterLogic', True)
                 set_section_enabled(config, 'SimplexLogic', False)
                 set_kv(config, 'RepeaterLogic', 'CALLSIGN', callsign, enabled=True)
