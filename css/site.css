@@ -59,9 +59,19 @@ h1 {
   border: 1px solid #d7e2f0;
 }
 
-.page-header .page-heading {
+..page-header .page-heading {
   display: grid;
   gap: 0.35rem;
+}
+
+.page-icon {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 18px;
+  background: #eef3fb;
+  padding: 12px;
+  border: 1px solid #d7e2f0;
 }
 
 .page-header p {
