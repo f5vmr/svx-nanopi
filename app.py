@@ -311,9 +311,9 @@ def setup():
                     error = 'Beep frequency must be between 600 and 1000 Hz.'
             except ValueError:
                 error = 'Beep frequency must be a number between 600 and 1000.'
-        elif squelch_method not in ('gpiod', 'gpiod_ctcss', 'ctcss'):
+        elif squelch_method not in ('gpiod', 'ctcss'):
             error = 'Please select a valid squelch method.'
-        elif squelch_method in ('gpiod_ctcss', 'ctcss'):
+        elif squelch_method == 'ctcss':
             try:
                 ctcss_value = float(ctcss_freq)
                 if ctcss_value not in CTCSS_FREQUENCIES:
@@ -321,7 +321,7 @@ def setup():
             except ValueError:
                 error = 'CTCSS frequency must be a number.'
             if ctcss_tx not in ('yes', 'no'):
-                error = 'Please specify if CTCSS is required on transmit.'
+                error = 'Please specify if CTCSS is for receive only or transmit and receive.'
         else:
             freq_value = 800
 
@@ -346,14 +346,16 @@ def setup():
             # Set squelch
             if squelch_method == 'gpiod':
                 set_kv(config, logic_section, 'SQL_DET', 'GPIOD', enabled=True)
-            elif squelch_method == 'gpiod_ctcss':
-                set_kv(config, logic_section, 'SQL_DET', 'GPIOD_AND_CTCSS', enabled=True)
-                set_kv(config, logic_section, 'CTCSS_FQ', ctcss_freq, enabled=True)
-                set_kv(config, logic_section, 'CTCSS_MODE', '2' if ctcss_tx == 'yes' else '1', enabled=True)
             elif squelch_method == 'ctcss':
-                set_kv(config, logic_section, 'SQL_DET', 'CTCSS', enabled=True)
-                set_kv(config, logic_section, 'CTCSS_FQ', ctcss_freq, enabled=True)
-                set_kv(config, logic_section, 'CTCSS_MODE', '2' if ctcss_tx == 'yes' else '1', enabled=True)
+                # For CTCSS alone, modify Rx1 section
+                set_kv(config, 'Rx1', 'SQL_DET', 'CTCSS', enabled=True)
+                set_kv(config, 'Rx1', 'CTCSS_MODE', '4', enabled=True)
+                set_kv(config, 'Rx1', 'CTCSS_FQ', ctcss_freq, enabled=True)
+                
+                # If transmit and receive, also modify Tx1 section
+                if ctcss_tx == 'yes':
+                    set_kv(config, 'Tx1', 'CTCSS_FQ', ctcss_freq, enabled=True)
+                    set_kv(config, 'Tx1', 'CTCSS_LEVEL', '-24', enabled=True)
 
             replace_callsign(config, 'MYCALL', callsign)
 

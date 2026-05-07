@@ -42,27 +42,35 @@
                 <label for="squelch_gpiod">GPIOD alone</label>
             </div>
             <div id="gpiod-info" class="toggle-details hidden">
-                Rx1 Squelch is set to Line 203 Pin 7 as Active High.<br>
+                <strong>GPIOD Squelch:</strong> Rx1 Squelch is set to Line 203 Pin 7 as Active High.<br>
                 Tx1 PTT pin is Line 6 Pin 12.
-            </div>
-            <div class="radio-row">
-                <input type="radio" id="squelch_gpiod_ctcss" name="squelch_method" value="gpiod_ctcss" {% if squelch_method == 'gpiod_ctcss' %}checked{% endif %}>
-                <label for="squelch_gpiod_ctcss">GPIOD and CTCSS</label>
             </div>
             <div class="radio-row">
                 <input type="radio" id="squelch_ctcss" name="squelch_method" value="ctcss" {% if squelch_method == 'ctcss' %}checked{% endif %}>
                 <label for="squelch_ctcss">CTCSS alone</label>
             </div>
             <div id="ctcss-settings" class="toggle-details hidden">
-                <label class="label" for="ctcss_freq">CTCSS Frequency (Hz):</label>
-                <select class="select-field" id="ctcss_freq" name="ctcss_freq">
-                    {% for freq in ctcss_frequencies %}
-                    <option value="{{ freq }}" {% if ctcss_freq == freq|string %}selected{% endif %}>{{ freq }} Hz</option>
-                    {% endfor %}
-                </select>
-                <div class="checkbox-row">
-                    <input type="checkbox" id="ctcss_tx" name="ctcss_tx" value="yes" {% if ctcss_tx == 'yes' %}checked{% endif %}>
-                    <label for="ctcss_tx">Require CTCSS on transmit as well as receive</label>
+                <div class="field-group">
+                    <label class="label">CTCSS Frequency (Hz):</label>
+                    <div class="radio-group">
+                        {% for freq in ctcss_frequencies %}
+                        <div class="radio-row">
+                            <input type="radio" id="ctcss_freq_{{ freq }}" name="ctcss_freq" value="{{ freq }}" {% if ctcss_freq == freq|string %}checked{% endif %}>
+                            <label for="ctcss_freq_{{ freq }}">{{ freq }} Hz</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label class="label">CTCSS Application:</label>
+                    <div class="radio-row">
+                        <input type="radio" id="ctcss_rx_only" name="ctcss_tx" value="no" {% if ctcss_tx == 'no' %}checked{% endif %}>
+                        <label for="ctcss_rx_only">Receive only</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" id="ctcss_tx_rx" name="ctcss_tx" value="yes" {% if ctcss_tx == 'yes' %}checked{% endif %}>
+                        <label for="ctcss_tx_rx">Transmit and Receive</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,11 +125,10 @@
             const gpiodInfo = document.getElementById('gpiod-info');
             const ctcssSettings = document.getElementById('ctcss-settings');
             const squelchGpiod = document.getElementById('squelch_gpiod');
-            const squelchGpiodCtcss = document.getElementById('squelch_gpiod_ctcss');
             const squelchCtcss = document.getElementById('squelch_ctcss');
 
             gpiodInfo.style.display = squelchGpiod.checked ? 'block' : 'none';
-            ctcssSettings.style.display = (squelchGpiodCtcss.checked || squelchCtcss.checked) ? 'block' : 'none';
+            ctcssSettings.style.display = squelchCtcss.checked ? 'block' : 'none';
         }
 
         document.querySelectorAll('input[name="tone_type"]').forEach((input) => {
