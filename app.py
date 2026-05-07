@@ -176,6 +176,7 @@ def modify_logic_tcl(tone_type, tone_freq=None):
 
 
 def save_config(filename, config):
+    os.chmod(filename, 0o765)
     with open(filename, 'w') as f:
         f.write(serialize_config(config))
 
