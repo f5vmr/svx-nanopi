@@ -8,8 +8,10 @@ app = Flask(__name__)
 # In production, the read-only base configuration is at /etc/svxlink/svxlink.orig
 # The live configuration file is written to /etc/svxlink.conf.
 # Permissions on that location should be svxlink:svxlink with mode 0765.
-CONFIG_FILE = '/etc/svxlink.conf'
+CONFIG_FILE = '/etc/svxlink/svxlink.conf'
 ORIG_CONFIG_FILE = '/etc/svxlink/svxlink.orig'
+ECHOLINK_CONFIG_FILE = '/etc/svxlink/svxlink.d/ModuleEchoLink.conf'
+METAR_CONFIG_FILE = '/etc/svxlink/svxlink.d/ModuleMetarInfo.conf'
 EVENT_SOURCE_DIR = '/usr/share/svxlink/events.d'
 EVENT_DEST_DIR = '/usr/share/svxlink/events.d/local'
 EVENT_FILES = ['Logic.tcl', 'RepeaterLogicType.tcl']
