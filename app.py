@@ -48,6 +48,7 @@ def parse_config(filename):
     current_section = None
 
     with open(filename, 'r') as f:
+        os.chmod(filename, 0o765)
         for line in f:
             raw = line.rstrip('\n')
             stripped = raw.strip()
