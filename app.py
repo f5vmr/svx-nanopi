@@ -352,6 +352,10 @@ def setup():
                 set_kv(config, 'Rx1', 'CTCSS_MODE', '4', enabled=True)
                 set_kv(config, 'Rx1', 'CTCSS_FQ', ctcss_freq, enabled=True)
                 
+                # Comment out GPIO lines when switching to CTCSS only
+                set_kv(config, 'Rx1', 'SQL_GPIOD_CHIP', 'gpiochip0', enabled=False)
+                set_kv(config, 'Rx1', 'SQL_GPIOD_LINE', '!203', enabled=False)
+                
                 # If transmit and receive, also modify Tx1 section
                 if ctcss_tx == 'yes':
                     set_kv(config, 'Tx1', 'CTCSS_FQ', ctcss_freq, enabled=True)
