@@ -49,25 +49,15 @@ h1 {
   margin-bottom: 1.45rem;
 }
 
-.page-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 14px;
-  background: #eef3fb;
-  padding: 10px;
-  border: 1px solid #d7e2f0;
-}
-
-..page-header .page-heading {
+.page-header .page-heading {
   display: grid;
   gap: 0.35rem;
 }
 
 .page-icon {
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
+  width: 172px;
+  height: 57px;
+  min-width: 172px;
   border-radius: 18px;
   background: #eef3fb;
   padding: 12px;
