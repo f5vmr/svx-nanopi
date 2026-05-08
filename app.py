@@ -198,7 +198,7 @@ def set_config_permissions(filename):
         pass
 
     try:
-        os.chmod(filename, 0o640)
+        os.chmod(filename, 0o765)
     except PermissionError:
         pass
 
