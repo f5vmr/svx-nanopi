@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, send_from_directory
+from flask import Flask, config, render_template, request, redirect, send_from_directory
 import grp
 import os
 import pwd
@@ -424,39 +424,30 @@ def setup():
 
 
 @app.route('/connect', methods=['GET', 'POST'])
-
-
-
-@app.route('/done')
-def done():
-    return render_template('done.html')
 def connect():
     error = None
+
     if request.method == 'POST':
         answer = request.form.get('connect')
         password = request.form.get('password', '').strip()
+        reflector = request.form.get('reflector', '')
 
-        reflector_data = request.form.get('reflector', '')
         config = parse_config(CONFIG_FILE)
 
         if answer == 'yes':
 
-            if not reflector_data:
+            if not reflector or '|' not in reflector:
                 error = 'Please select a reflector.'
 
-            else:
-                try:
-                    host, port, web_url = reflector_data.split('|')
-                except ValueError:
-                    error = 'Invalid reflector selection.'
+            elif not password:
+                error = 'Please enter the 16-character subscription password from north.america.svxlink.net.'
 
-            if not password and not error:
-                error = 'Please enter the 16-character subscription password from the reflector site.'
-
-            elif len(password) != 16 and not error:
+            elif len(password) != 16:
                 error = 'Password must be exactly 16 characters long.'
 
-            if not error:
+            else:
+                host, port, web_url = reflector.split('|')
+
                 set_kv(config, 'ReflectorLogic', 'HOSTS', host, enabled=True)
                 set_kv(config, 'ReflectorLogic', 'HOST_PORT', port, enabled=True)
 
@@ -474,6 +465,10 @@ def connect():
             return redirect('/done')
 
     return render_template('connect.html', error=error)
+
+@app.route('/done')
+def done():
+    return render_template('done.html')
 
 @app.route('/talkgroup')
 def talkgroup():

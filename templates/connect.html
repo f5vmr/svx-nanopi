@@ -7,64 +7,95 @@
     <link rel="stylesheet" href="{{ url_for('css_file', filename='site.css') }}">
     <link rel="icon" href="{{ url_for('image_file', filename='svxlink_logo.png') }}" type="image/x-icon">
 </head>
+
 <body>
     <main class="page">
         <section class="card">
+
             <div class="page-header">
                 <img class="page-icon" src="{{ url_for('image_file', filename='svxlink_logo.png') }}" alt="SvxLink icon">
                 <div class="page-heading">
                     <h1>Reflector Connection</h1>
-                    <p>Do you wish to connect to <strong>north.america.svxlink.net</strong>?</p>
+                    <p>Do you wish to connect to an SvxReflector?</p>
                 </div>
             </div>
-    {% if error %}
-        <p class="error">{{ error }}</p>
-    {% endif %}
-    <form action="/connect" method="post">
-        <div class="option-group">
-            <div class="radio-row">
-                <input type="radio" id="yes" name="connect" value="yes" checked>
-                <label for="yes">Yes, I will subscribe manually</label>
-            </div>
-            <div class="radio-row">
-                <input type="radio" id="no" name="connect" value="no">
-                <label for="no">No, continue without connecting</label>
-            </div>
-        </div>
 
-        <div class="note">
-            You must visit the following sites yourself, subscribe, and obtain the password there.
-        </div>
-        <div class="field-group">
-    <label class="label" for="reflector">Select Reflector:</label>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
 
-    <select class="input-field" id="reflector" name="reflector">
-        <option value="north.america.svxlink.net|35300|https://north.america.svxlink.net">
-            North America Reflector
-        </option>
+            <form action="/connect" method="post">
 
-        <option value="uk.wide.svxlink.uk|35300|https://ukwide.svxlink.net">
-            UKWide Reflector
-        </option>
+                <div class="option-group">
+                    <div class="radio-row">
+                        <input type="radio" id="yes" name="connect" value="yes" checked>
+                        <label for="yes">Yes, I will subscribe manually</label>
+                    </div>
 
-        <option value="australia.svxlink.net|35300|https://au.svxlink.net">
-            Australia / New Zealand Reflector
-        </option>
+                    <div class="radio-row">
+                        <input type="radio" id="no" name="connect" value="no">
+                        <label for="no">No, continue without connecting</label>
+                    </div>
+                </div>
 
-        <option value="yorkshire.svxlink.uk|5310|https://svxlink.qsos.uk/">
-            YorkshireNet Reflector
-        </option>
-    </select>
-</div>
+                <!-- Reflector selection added INSIDE the same form -->
+                <div class="field-group">
+                    <label class="label" for="reflector">Select Reflector:</label>
 
-        <div class="field-group">
-            <label class="label" for="password">Subscription password (enter after subscribing):</label>
-            <input class="input-field" type="text" id="password" name="password" placeholder="Enter 16-character password" maxlength="16" autocomplete="off">
-        </div>
+                    <select class="input-field" id="reflector" name="reflector">
 
-        <button class="button-primary" type="submit">Continue</button>
-    </form>
-</section>
-</main>
+                        <option value="north.america.svxlink.net|35300|https://north.america.svxlink.net">
+                            North America Reflector
+                        </option>
+
+                        <option value="uk.wide.svxlink.uk|35300|https://ukwide.svxlink.net">
+                            UKWide Reflector
+                        </option>
+
+                        <option value="australia.svxlink.net|35300|https://au.svxlink.net">
+                            Australia / New Zealand Reflector
+                        </option>
+
+                        <option value="yorkshire.svxlink.uk|5310|https://svxlink.qsos.uk/">
+                            YorkshireNet Reflector
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="note">
+                    You must visit the following sites yourself, subscribe, and obtain the password there.
+                </div>
+
+               <div class="note">
+                    Subscription sites:<br>
+                    <a href="https://north.america.svxlink.net" target="_blank">North America</a><br>
+                    <a href="https://ukwide.svxlink.net" target="_blank">UKWide</a><br>
+                    <a href="https://au.svxlink.net" target="_blank">Australia / New Zealand</a><br>
+                    <a href="https://svxlink.qsos.uk/" target="_blank">YorkshireNet</a>
+                </div>
+
+                <div class="field-group">
+                    <label class="label" for="password">
+                        Subscription password (enter after subscribing):
+                    </label>
+
+                    <input class="input-field"
+                           type="text"
+                           id="password"
+                           name="password"
+                           placeholder="Enter 16-character password"
+                           maxlength="16"
+                           autocomplete="off">
+                </div>
+
+                <button class="button-primary" type="submit">
+                    Continue
+                </button>
+
+            </form>
+
+        </section>
+    </main>
 </body>
 </html>
