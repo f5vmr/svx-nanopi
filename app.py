@@ -454,6 +454,29 @@ def connect():
 def done():
     return render_template('done.html')
 
+@app.route('/talkgroup')
+def talkgroup():
+    return render_template('talkgroup.html')
+
+@app.route('/reflector')
+def reflector():
+    return render_template('reflector.html')
+
+@app.route('/echolink')
+def echolink():
+    return render_template('echolink.html')
+
+@app.route('/metar')
+def metar():
+    return render_template('metar.html')
+
+@app.route('/events')
+def events():
+    return render_template('events.html')
+
+@app.route('/advanced')
+def advanced(): 
+    return render_template('advanced.html')
 
 @app.route('/restart', methods=['POST'])
 def restart():
