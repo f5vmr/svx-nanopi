@@ -35,17 +35,10 @@
         <div class="note">
             You must visit the following sites yourself, subscribe, and obtain the password there.
         </div>
-        <div class="note">
-            <a href="https://north.america.svxlink.net" target="_blank">https://north.america.svxlink.net</a>
-        </div>
-
         <div class="field-group">
-    <label class="label" for="reflector">
-        Select SvxLink Reflector:
-    </label>
+    <label class="label" for="reflector">Select Reflector:</label>
 
     <select class="input-field" id="reflector" name="reflector">
-
         <option value="north.america.svxlink.net|35300|https://north.america.svxlink.net">
             North America Reflector
         </option>
@@ -61,9 +54,13 @@
         <option value="yorkshire.svxlink.uk|5310|https://svxlink.qsos.uk/">
             YorkshireNet Reflector
         </option>
-
     </select>
 </div>
+
+        <div class="field-group">
+            <label class="label" for="password">Subscription password (enter after subscribing):</label>
+            <input class="input-field" type="text" id="password" name="password" placeholder="Enter 16-character password" maxlength="16" autocomplete="off">
+        </div>
 
         <button class="button-primary" type="submit">Continue</button>
     </form>
