@@ -494,7 +494,16 @@ def advanced():
 def restart():
     restore_backup(CONFIG_FILE)
     return redirect('/setup')
+@app.route('/launch', methods=['POST'])
+def launch():
+    import subprocess
 
+    subprocess.run(
+        ["sudo", "systemctl", "restart", "svxlink"],
+        check=True
+    )
+
+    return redirect('/done')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
