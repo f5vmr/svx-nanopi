@@ -20,6 +20,10 @@ Connect the Nanopi-Neo to your IP Network before powering up, then do so.
 Go to a browser on a computer within the same IP network and enter svxlink.local:5000 and you can then begin the configuration.
 
 Pay special attention to your hardware's configuration, particularly the operation of the Squelch (SQL/COS) and the PTT. Under normal circumstances these will both be Active High. But in the eventuality of a difference, both of these can be individually changed to Active Low by going back to the relevant page in the software.
+<p align = center>
+At the end of the build you shall have one of these....<br>
+<p align= center>
+<img src="images/dashboard.jpeg">
 
 
 
