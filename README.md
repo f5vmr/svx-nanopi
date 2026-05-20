@@ -23,7 +23,7 @@ Pay special attention to your hardware's configuration, particularly the operati
 <br>
 <img src="images/1.png" width="200"><img src="images/2.png" width="200"><img src="images/3.png" width="200"><br>
 <img src="images/4.png" width="200"><img src="images/5.png" width="200"><img src="images/6.png" width="200"><br>
-<img src="images/6.png" width="200"><img src="images/7.png" width="200"><img src="images/8.png" width="200"><img src="images/9.png" width="200"><br>
+<img src="images/7.png" width="200"><img src="images/8.png" width="200"><img src="images/9.png" width="200"><br>
 <img src="images/A.png" width="200"><img src="images/B.png" width="200"><img src="images/C.png" width="200"><br>
 <img src="images/E.png" width="200"><img src="images/F.png" width="200"><img src="images/G.png" width="200"><br>
 <p align = center src="images/G.png" width="200"></p>
