@@ -1,4 +1,4 @@
-<h2>SvxLink for Nanopi-neo and the Repeater-Builders.com "NanoPi-Neo Hat"</h2><br>
+<h2>SvxLink for Nanopi-neo and the Repeater-Builders.com "NanoPi-Neo HAT"</h2><br>
 <p align = "center">
 <img src="images/nanopi-neo.jpeg" width="400">
 <br>
@@ -11,11 +11,11 @@ Thanks to Tobias Blömberg SM0SVX for the SvxLink Software<br>
 <p>Here is the link to the download : https://github.com/f5vmr/svx-nanopi/releases/download/V1.0/svx-nanopi-neo.img.gz </p>
 Under normal circumstances, the image should not need to be unzipped (as happens with the Raspberry Pi Imager)
 
-Install into the NanoPi-Neo with the hat in place. Follow the instruction with the hat to connect your transceiver or transceivers/repeater hardware.
+Install into the NanoPi-Neo with the hat in place. Follow the instruction with the hat to connect your transceiver or transceivers/repeater hardware. The Nanopi-Neo with the HAT requires no other hardware, it has an on-board sound card and GPIOD configuration prepared for this configuration.
 
 Avoid using a Yaesu DR1X or DR2X as you will not achieve the benefit of the Repeater Configuration of the software, unless you disable the onboard hardware of the repeater.
 
-Connect the Nanopi-Neo to your IP Network before powering up, then do so.
+Connect the Nanopi-Neo to your IP Network before powering up, then turn it on.
 
 Go to a browser on a computer within the same IP network and enter svxlink.local:5000 and you can then begin the configuration.
 
