@@ -1,5 +1,5 @@
 #SvxLink for Nanopi-neo and the Repeater-Builders.com "NanoPi-Neo Hat"
-(images/nanopi-neo.jpg)      (images/svxlink_logo.png) 
+![svx-nanopi](images/nanopi-neo.jpg)      (images/svxlink_logo.png) 
 
 
 Thanks to Tobias Blömberg SM0SVX for the SvxLink Software
