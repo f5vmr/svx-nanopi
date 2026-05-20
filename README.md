@@ -35,7 +35,7 @@ At the end of the build you shall have one of these....<br>
 </p>
 
 <b>and if it all goes wrong .....</b>
-<p>So first of all, go to the terminal and log in as user 'pi' and password 'nanopi'.<-p>
+<p>So first of all, go to the terminal and log in as user 'pi' and password 'nanopi'.</p>
 <p>cd /opt/dashboard</p>
 <p>sudo rm config/node_model.json</p>
 <p>exit</p>
