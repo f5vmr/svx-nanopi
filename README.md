@@ -29,7 +29,7 @@ Pay special attention to your hardware's configuration, particularly the operati
 <p align = center src="images/G.png" width="200"></p>
 <br>
 <p align = center>
-At the end of the build you shall have one of these....<br>
+At the end of the build you shall have one of these....It will always be svxlink.local:5000/status <br>
 <p align= center>
 <img src="images/I.png">
 </p>
