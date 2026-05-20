@@ -1,9 +1,9 @@
-**SvxLink for Nanopi-neo and the Repeater-Builders.com "NanoPi-Neo Hat"<br>
+*SvxLink for Nanopi-neo and the Repeater-Builders.com "NanoPi-Neo Hat"<br>
 
-<img src="images/nanopi-neo.jpeg" width="400"><img src="images/svxlink_logo.png" width="200">
+<img src="images/nanopi-neo.jpeg" width="400">
 
-Thanks to Tobias Blömberg SM0SVX for the SvxLink Software
-
+Thanks to Tobias Blömberg SM0SVX for the SvxLink Software<br>
+<img src="images/svxlink_logo.png" width="200"><br>
 The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using an image builder of your choice.
 
 Under normal circumstances, the image should not need to be unzipped (as happens with the Raspberry Pi Imager)
