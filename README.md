@@ -1,57 +1,15 @@
-# SvxLink Configuration Dashboard
+#SvxLink for Nanopi-neo and the Repeater-Builders.com Nanopi-Neo Hat
 
-This is a Python3 Flask web application that provides a dashboard to view and edit the SvxLink configuration file (`svxlink.conf`).
+The image associated with this repository is found in 'Releases' on the right of this page.
+Simply download the image and install it using an image builder of your choice.
+Under normal circumstances, the image should not need to be unzipped (as happens with the Raspberry Pi Imager)
 
-## Features
+Install into the NanoPi-Neo with the hat in place. Follow the instruction for the hat to connect your transceiver
+or transceivers/repeater hardware.
 
-- Node type selection (Simplex/Repeater) that enables the appropriate logic section.
-- Displays all configuration sections and parameters in a web interface.
-- Allows editing of parameters through a form.
-- Saves changes back to the configuration file with automatic backups.
-- Accessible at `hostname.local/install` (assuming hostname is set to 'svxlink').
+Avoid using a Yaesu DR1X or DR2X as you will not achieve the benefit of the Repeater Configuration of the software.
 
-## Installation
+Connect the Nanopi-Neo to your IP Network before powering up, then do so.
 
-1. Ensure Python3 is installed.
-2. Install dependencies:
-   ```
-   pip3 install -r requirements.txt
-   ```
+Go to a browser on a computer within the same IP network and enter svxlink.local:5000 and you can then begin the configuration.
 
-## Running the Application
-
-To run the dashboard:
-
-```
-python3 app.py
-```
-
-This runs the Flask app on port 5002, accessible at `http://localhost:5002/`.
-
-For production on the NanoPi (assuming hostname 'svxlink'), modify `app.py` to run on port 80 and use:
-
-```
-sudo python3 app.py
-```
-
-Then access at `svxlink.local/`.
-
-## Usage
-
-- Start by visiting the root URL to configure the node type (Simplex or Repeater).
-- Then, the dashboard will guide you to `/setup` to view and edit the configuration parameters.
-- Check/uncheck boxes to enable/disable parameters (adds/removes `#`).
-- Click "Save Changes" to update the file (a backup `svxlink.conf.bak` is created automatically).
-
-## Usage
-
-- Navigate to `svxlink.local/setup` in your browser.
-- View and edit the configuration parameters.
-- Click "Save Changes" to update the file.
-
-## Future Enhancements
-
-- Add validation for parameter values.
-- Include descriptions or comments from the config file.
-- Add functionality to restart SvxLink service after changes.
-- Improve the UI styling.
