@@ -34,7 +34,14 @@ At the end of the build you shall have one of these....<br>
 <img src="images/I.png">
 </p>
 
-
-
+<b>and if it all goes wrong .....</b>
+<p>So first of all, go to the terminal and log in as user 'pi' and password 'nanopi'.<-p>
+<p>cd /opt/dashboard</p>
+<p>sudo rm config/node_model.json</p>
+<p>exit</p>
+<p>Now go back to svxlink.local:5000 and start again</p>
+<p>If you ever forget your dashboard user and password, then go into the terminal again but this time cd /opt/dashboard/tools/</p>
+<p>sudo ./reset_dashboard_auth.py and follow the instruction.</p>
+<p>Exit the terminal and go back to svxlink.local/status which is where you probably want to be.</p>
 
 
