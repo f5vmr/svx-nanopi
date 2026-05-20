@@ -43,5 +43,15 @@ At the end of the build you shall have one of these....It will always be svxlink
 <p>If you ever forget your dashboard user and password, then go into the terminal again but this time cd /opt/dashboard/tools/</p>
 <p>sudo ./reset_dashboard_auth.py and follow the instruction.</p>
 <p>Exit the terminal and go back to svxlink.local/status which is where you probably want to be.</p>
+<p>If you need to know more, or do more with SvxLink, then at the terminal type 'man svxlink.conf' which is the fount of all knowledge. If you are still stuck then, go to https://groups.io/svxlink and research there. To meet others in the SvxLink community, then you can go to Facebook SvxLink Amateur Radio Users.</p
 
+<p>This project cannot provide you with all the answers, as the SvxLink software is far too deep to explain simply.</p>
+
+<p>If you really want to know more the go to svxlink.org, the very heart of the project.</p>
+
+<p>Again thanks go to Tobias Blömberg SM0SVX and the team of developers, that have brought this fine project to the Amateur Radio Community.</p>
+
+<p>Thanks to Scott Zimmerman N3XCC for his enthusiasm and support for this project.</p>
+
+<p>73 from Chris G4NAB (formerly F5VMR)</p>
 
