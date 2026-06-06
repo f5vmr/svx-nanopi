@@ -8,7 +8,7 @@ Thanks to Tobias Blömberg SM0SVX for the SvxLink Software<br>
 <img src="images/svxlink_logo.png" width="200"><br>
 </p>
 <br>The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using an image builder of your choice.<br>
-<p>Here is the link to the download : https://github.com/f5vmr/svx-nanopi/releases/download/V1.0/svx-nanopi-neo.img.gz </p>
+<p>Here is the link to the download :[https://github.com/f5vmr/svx-nanopi/releases/download/V1.01/svxlink_26.05_armhf.img.gz] </p>
 Under normal circumstances, the image should not need to be unzipped (as also happens with the Raspberry Pi Imager - a raspberry pi image remains zipped. The imager unzips it for you.)
 
 Install into the NanoPi-Neo with the hat in place. Follow the instruction with the hat to connect your transceiver or transceivers/repeater hardware. The Nanopi-Neo with the HAT requires no other hardware, it has an on-board sound card and GPIOD configuration prepared for this configuration.
