@@ -8,7 +8,8 @@ Thanks to Tobias Blömberg SM0SVX for the SvxLink Software now on version 26.05.
 <img src="images/svxlink_logo.png" width="200"><br>
 </p>
 <p>The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using an image builder of your choice.<br></p>
-<p>Here is the link to the download :[https://github.com/f5vmr/svx-nanopi/releases/download/V1.01/svxlink_26.05_armhf.img.gz] </p>
+<p>Here is the link to the download :[https://github.com/f5vmr/svx-nanopi/releases/download/V26.05.1_Armbian/svxlink_26.05.1_armbian.img.gz]
+</p>
 Under normal circumstances, the image should not need to be unzipped (as also happens with the Raspberry Pi Imager 1.9.6 - a raspberry pi image remains zipped and the imager unzips it for you. Use 2.10.1 of the RaspberryPi Imager or its Armbian euivalent found here https://imager.armbian.com/.)
 <p> While Armbian OS 13 equivalent is available, it is untried and untested. This SvxLink image is constructed on Armbian Jammy a version of Ubuntu that has long term support. Upgrading the OS will serve no purpose.</p>
 <pre>PRETTY_NAME="Armbian 26.2.1 jammy"
