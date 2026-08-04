@@ -107,7 +107,7 @@ numid=20,iface=MIXER,name='Line Out Source Playback Route'
 
 <p>Again thanks go to Tobias Blömberg SM0SVX and the team of developers, that have brought this fine project to the Amateur Radio Community.</p>
 
-<p>Thanks to Scott Zimmerman N3XCC for his enthusiasm and support for this project.</p>
+<p>Thanks to Scott Zimmerman N3XCC for the manufacture of the board, and his enthusiasm and support for this project.</p>
 
 <p>73 from Chris G4NAB (formerly F5VMR) developer of the Svxlink Dashboard V3.1</p>
 
