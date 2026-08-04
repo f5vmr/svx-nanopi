@@ -11,8 +11,23 @@ Thanks to Tobias Blömberg SM0SVX for the SvxLink Software now on version 26.05.
 <p>Here is the link to the download :[https://github.com/f5vmr/svx-nanopi/releases/download/V1.01/svxlink_26.05_armhf.img.gz] </p>
 Under normal circumstances, the image should not need to be unzipped (as also happens with the Raspberry Pi Imager 1.9.6 - a raspberry pi image remains zipped and the imager unzips it for you. Use 2.10.1 of the RaspberryPi Imager or its Armbian euivalent found here https://imager.armbian.com/.)
 <p> While Armbian OS 13 is available, it is untried and untested. This SvxLink image is constructed on Armbian Jammy a version of Ubuntu that has long term support. Upgrading the OS will serve no purpose.</p>
+<pre>PRETTY_NAME="Armbian 26.2.1 jammy"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.armbian.com/"
+SUPPORT_URL="https://forum.armbian.com"
+BUG_REPORT_URL="https://www.armbian.com/bugs"
+PRIVACY_POLICY_URL="https://www.armbian.com"
+UBUNTU_CODENAME=jammy
+ARMBIAN_PRETTY_NAME="Armbian 26.2.1 jammy"</pre>
 
-<p>Install into the NanoPi-Neo with the hat in place. Follow the instruction with the hat to connect your transceiver or transceivers/repeater hardware. The Nanopi-Neo with the HAT requires no other hardware, it has an on-board sound card and GPIOD configuration prepared for this configuration. Be aware that you will be asked questions in the menu. You shall need to know the actions of your radio equipment with regard to PTT and COS. In general terms PTT is activated by dragging the PTT line to ground - Active-Low. In the main when a signal is received by the radio equipment a high signal is detected at COS - Active High. Because this image already contains the parameters for PTT, you will only be asked for the SQL setting. This can be GPIOD or CTCSS. Generally both also set will work primarily on GPIOD. CTCSS for SvxLink is combined with the incoming audio not on a separate line.</p>
+<p>Install into the NanoPi-Neo with the hat in place. Follow the instruction with the hat to connect your transceiver or transceivers/repeater hardware. The Nanopi-Neo with the HAT requires no other hardware, it has an on-board sound card and GPIOD configuration prepared for this configuration. Be aware that you will be asked questions in the menu. You shall need to know the actions of your radio equipment with regard to PTT and COS. In general terms PTT is activated by dragging the PTT line to ground - Active-Low. In the main when a signal is received by the radio equipment a high signal is detected at COS - Active High.<br>
+Because this image already contains the parameters for PTT, you will only be asked for the SQL setting. This can be GPIOD or CTCSS. Generally if both are set then it will work primarily on GPIOD. So if CTCSS is requires set it alone.<br>
+CTCSS for SvxLink is combined with the incoming audio not on a separate line.</p>
 
 <p>Avoid using a Yaesu DR1X or DR2X as you will not achieve the benefit of the Repeater Configuration of the software, unless you disable the onboard hardware of the repeater. This will defeat the Digital repeater, leaving it on FM Analog only. If you wish to retain the digital mode, then run svxlink as simplex, but you will need to learn more about the settings.</p>
 
@@ -51,7 +66,7 @@ At the end of the build you shall have one of these....It will always be svxlink
 <p>If you really want to know more then go to svxlink.org, the very heart of the project.</p>
 <p><b>Special Note regarding Audio Level and alsamixer/amixer</b>.<br>
 While every effort has been made to set the audio levels to a reasonable state, there will be reasons for change dependant on the equipment used. The potentiometer in the NanoPi-Neo Repeater-Builder hat should be set initially at the midway position. While there are opportunity for change of the audio settings, make a record of the initial settings before changing them.<br>
-```text
+<pre>
 ### H3 codec mixer state
 ===== numid=17 =====
 numid=17,iface=MIXER,name='Line In Capture Switch'
@@ -84,7 +99,7 @@ numid=20,iface=MIXER,name='Line Out Source Playback Route'
   ; Item #1 'Mono Differential'
   : values=1,1
 ```
-</p>
+</pre>
 
 <p>Again thanks go to Tobias Blömberg SM0SVX and the team of developers, that have brought this fine project to the Amateur Radio Community.</p>
 
