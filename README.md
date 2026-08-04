@@ -1,4 +1,4 @@
-<h2>SvxLink for Nanopi-neo and the Repeater-Builders.com "NanoPi-Neo HAT"</h2><br>
+<h2>SvxLink for Nanopi-neo and the Repeater-Builder.com "NanoPi-Neo HAT"</h2><br>
 <p align = "center">
 <img src="images/nanopi-neo.jpeg" width="400">
 <br>
