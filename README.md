@@ -7,7 +7,7 @@ Thanks to Tobias Blömberg SM0SVX for the SvxLink Software now on version 26.05.
 <p align = center>
 <img src="images/svxlink_logo.png" width="200"><br>
 </p>
-<br>The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using an image builder of your choice.<br>
+<p>The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using an image builder of your choice.<br></p>
 <p>Here is the link to the download :[https://github.com/f5vmr/svx-nanopi/releases/download/V1.01/svxlink_26.05_armhf.img.gz] </p>
 Under normal circumstances, the image should not need to be unzipped (as also happens with the Raspberry Pi Imager 1.9.6 - a raspberry pi image remains zipped and the imager unzips it for you. Use 2.10.1 of the RaspberryPi Imager or its Armbian euivalent found here https://imager.armbian.com/.)
 <p> While Armbian OS 13 is available, it is untried and untested. This SvxLink image is constructed on Armbian Jammy a version of Ubuntu that has long term support. Upgrading the OS will serve no purpose.</p>
@@ -21,7 +21,7 @@ Under normal circumstances, the image should not need to be unzipped (as also ha
 <p>Go to a browser on a computer within the same IP network and enter svxlink.local:5000 and you can then begin the configuration.</p>
 
 <p> Remember pay special attention to your hardware's configuration, particularly the operation of the Squelch (SQL/COS) and the PTT. Under normal circumstances these will both be Active High and Active Low respectively. But in the eventuality of a difference, the receive can be changed to Active Low by going back to the relevant page in the software menu.</p>
-<<br>
+<br>
 <img src="images/1.png" width="200"><img src="images/2.png" width="200"><img src="images/3.png" width="200"><br>
 <img src="images/4.png" width="200"><img src="images/5.png" width="200"><img src="images/6.png" width="200"><br>
 <img src="images/7.png" width="200"><img src="images/8.png" width="200"><img src="images/9.png" width="200"><br>
@@ -51,6 +51,8 @@ At the end of the build you shall have one of these....It will always be svxlink
 <p>If you really want to know more then go to svxlink.org, the very heart of the project.</p>
 <p><b>Special Note regarding Audio Level and alsamixer/amixer</b>.<br>
 While every effort has been made to set the audio levels to a reasonable state, there will be reasons for change dependant on the equipment used. The potentiometer in the NanoPi-Neo Repeater-Builder hat should be set initially at the midway position. While there are opportunity for change of the audio settings, make a record of the initial settings before changing them.<br>
+```text
+### H3 codec mixer state
 ===== numid=17 =====
 numid=17,iface=MIXER,name='Line In Capture Switch'
   ; type=BOOLEAN,access=rw------,values=2
@@ -81,6 +83,7 @@ numid=20,iface=MIXER,name='Line Out Source Playback Route'
   ; Item #0 'Stereo'
   ; Item #1 'Mono Differential'
   : values=1,1
+```
 </p>
 
 <p>Again thanks go to Tobias Blömberg SM0SVX and the team of developers, that have brought this fine project to the Amateur Radio Community.</p>
