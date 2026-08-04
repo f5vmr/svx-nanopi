@@ -64,6 +64,8 @@ At the end of the build you shall have one of these....It will always be svxlink
 <p>This project cannot provide you with all the answers, as the SvxLink software is far too deep to explain simply.</p>
 
 <p>If you really want to know more then go to svxlink.org, the very heart of the project.</p>
+<p><b>Interface</b></p>
+<img src="images/Nanopi-neo-interface.jpg" width="600"><br>
 <p><b>Special Note regarding Audio Level and alsamixer/amixer</b>.<br>
 While every effort has been made to set the audio levels to a reasonable state, there will be reasons for change dependant on the equipment used. The potentiometer in the NanoPi-Neo Repeater-Builder hat should be set initially at the midway position. While there are opportunity for change of the audio settings, make a record of the initial settings before changing them.<br>
 <pre>
