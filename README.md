@@ -2,34 +2,22 @@
 <p align = "center">
 <img src="images/nanopi-neo.jpeg" width="400">
 <br>
-Thanks to Tobias Blömberg SM0SVX for the SvxLink Software now on version 26.05.1 with several security updates.<br>
+Thanks to Tobias Blömberg SM0SVX for the SvxLink Software now on version 26.05.2 with several security updates.<br>
 </p>
 <p align = center>
 <img src="images/svxlink_logo.png" width="200"><br>
 </p>
 <p>The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using an image builder of your choice.<br></p>
-<p>Here is the link to the download :[https://github.com/f5vmr/svx-nanopi/releases/download/V26.05.1_Armbian/svxlink_26.05.1_armbian.img.gz]
+<p>coming shortly
 </p>
 Under normal circumstances, the image should not need to be unzipped (as also happens with the Raspberry Pi Imager 1.9.6 - a raspberry pi image remains zipped and the imager unzips it for you. Use 2.10.1 of the RaspberryPi Imager or its Armbian euivalent found here https://imager.armbian.com/.)
-<p> While Armbian OS 13 equivalent is available, it is untried and untested. This SvxLink image is constructed on Armbian Jammy a version of Ubuntu that has long term support. Upgrading the OS will serve no purpose.</p>
-<pre>PRETTY_NAME="Armbian 26.2.1 jammy"
-NAME="Ubuntu"
-VERSION_ID="22.04"
-VERSION="22.04.5 LTS (Jammy Jellyfish)"
-VERSION_CODENAME=jammy
-ID=ubuntu
-ID_LIKE=debian
-HOME_URL="https://www.armbian.com/"
-SUPPORT_URL="https://forum.armbian.com"
-BUG_REPORT_URL="https://www.armbian.com/bugs"
-PRIVACY_POLICY_URL="https://www.armbian.com"
-UBUNTU_CODENAME=jammy
-ARMBIAN_PRETTY_NAME="Armbian 26.2.1 jammy"</pre>
+<p> This SvxLink image is constructed on Armbian 22.06 Minimal a version of Ubuntu that has long term support. Upgrading the OS will serve no purpose.</p>
 
 <p>Install into the NanoPi-Neo with the hat in place. Follow the instruction with the hat to connect your transceiver or transceivers/repeater hardware. The Nanopi-Neo with the HAT requires no other hardware, it has an on-board sound card and GPIOD configuration prepared for this configuration. Be aware that you will be asked questions in the menu. You shall need to know the actions of your radio equipment with regard to PTT and COS. In general terms PTT is activated by dragging the PTT line to ground - Active-Low. In the main when a signal is received by the radio equipment a high signal is detected at COS - Active High.<br>
-Because this image already contains the parameters for PTT, you will only be asked for the SQL setting. This can be GPIOD or CTCSS. Generally if both are set then it will work primarily on GPIOD. So if CTCSS is requires set it alone.<br>
-CTCSS for SvxLink is combined with the incoming audio not on a separate line.</p>
-<p>If you wish to join the SvxReflector  https://north.america.svxlink.net, then click on the downloads link and join SvxLink to register, and a password will be emailed to you, to complete the menu.</p>
+Because this image already contains the parameters for PTT, you will only be asked for the SQL setting. This can be GPIOD or CTCSS. Generally if CTCSS is unset it will work primarily on GPIOD. So if CTCSS is requires set it alone.<br>
+CTCSS for SvxLink is combined with the incoming audio not on a separate line such as in AllStarLink.</p>
+<p>You are encouraged to join the SvxReflector  https://north.america.svxlink.net, click on the signup link to register, and a password will be emailed to you, in order to complete the menu.</p>
+<p>Assemble all your required data information such as EchoLink, before commencing the build menu. For the North America Reflector you will be presented with Federation of Svxlink Reflector - choose this option, then North America from the dropdown list, and the password emailled to you from the sign-up.</p>
 
 <p>Avoid using a Yaesu DR1X or DR2X as you will not achieve the benefit of the Repeater Configuration of the software, unless you disable the onboard hardware of the repeater. This will defeat the Digital repeater, leaving it on FM Analog only. If you wish to retain the digital mode, then run svxlink as simplex, but you will need to learn more about the settings.</p>
 
