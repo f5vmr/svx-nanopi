@@ -143,6 +143,8 @@ Audio Levels - Probably Alsamixer would be best here, in the terminal.
 ![You can check your audio levels](images/38.jpg)
 ![Although you may wish to use alsamixer and experiment with the levels](images/38a.jpg)
 
+Once the levels are confirmed on the repeater, with alsamixer in view hit escape, then at the prompt, type sudo alsactl store, to preserve the settings over to a new session if the nanopi-neo is shutdown.
+
 For accurate determination of your audio levels, devcal is available.
 ![The devcal tool is built in but you can use it in the terminal](images/39.jpg)
 
