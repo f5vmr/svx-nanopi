@@ -109,7 +109,8 @@ Module Settings
 ![EchoLink is self explanatory, there are two pages for MetarInfo](images/25.jpg)
 ![](images/26.jpg)
 
-The SvxReflector Settings.
+The SvxReflector Settings. Adding your repeater to a reflector enhances your coverage. But for the most part you are in charge. There is not one node pushing activity at you. You choose to which talkgroups you connect.
+
 ![The Reflector Settings enhance the connectivity of the repeater across a huge network on a system of Analog Talkgroup](images/27.jpg)
 
 ![The North.america.svxlink.net reflector links to three others](images/28.jpg)
@@ -123,16 +124,19 @@ This page is particularly useful for accurate determination.
 ![The next page reviews everything, but you can retun to change items later](images/32.jpg)
 
 Now we are set to build the configuration of the Node/Repeater.
+
 ![Now we build the configuration file](images/33.jpg)
 ![At this point we are nearly ready to launch for the first time](images/34.jpg)
 
 Launched - We have a Dashboard, but there are still things to build.
+
 ![The Dashboard - Naturally you have editing rights, and you will need to sign in after leaving it unattended](images/35.jpg)
 
 Most of the parameters can be reconfigured through this menu, in case of earlier mistakes, or experimental setting.
+
 ![The Reconfiguration menu takes you to here, where you select the item you wish to change](images/36.jpg)
 
-Analog Talkgroups - You can see the active talkgroups on the https://north.america.svxlink.net Selecting some of these provides you will connectivity.
+Analog Talkgroups - You can see the active talkgroups on the https://north.america.svxlink.net Selecting some of these provides you with the enchanced connectivity.
 ![You can add talkgroups to monitor](images/37.jpg)
 
 Audio Levels - Probably Alsamixer would be best here, in the terminal.
