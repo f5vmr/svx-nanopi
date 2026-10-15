@@ -143,7 +143,7 @@ Audio Levels - Probably Alsamixer would be best here, in the terminal.
 ![You can check your audio levels](images/38.jpg)
 ![Although you may wish to use alsamixer and experiment with the levels](images/38a.jpg)
 
-FOr accurate determination of yout levels devcal is available.
+For accurate determination of your audio levels, devcal is available.
 ![The devcal tool is built in but you can use it in the terminal](images/39.jpg)
 
 Adn for restart and shutdown, everything is included.
