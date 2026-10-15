@@ -17,7 +17,7 @@ Under normal circumstances, the image should not need to be unzipped (as also ha
 Because this image already contains the parameters for PTT, you will only be asked for the SQL setting. This can be GPIOD or CTCSS. Generally if CTCSS is unset it will work primarily on GPIOD. So if CTCSS is requires set it alone.<br>
 CTCSS for SvxLink is combined with the incoming audio not on a separate line such as in AllStarLink.</p>
 <p>You are encouraged to join the SvxReflector  https://north.america.svxlink.net, click on the signup link to register, and a password will be emailed to you, in order to complete the menu.</p>
-<p>Assemble all your required data information such as EchoLink, before commencing the build menu. For the North America Reflector you will be presented with Federation of Svxlink Reflector - choose this option, then North America from the dropdown list, and the password emailled to you from the sign-up.</p>
+<p>Assemble all your required data information such as EchoLink, before commencing the build menu. For the North America Reflector you will be presented with Federation of Svxlink Reflector - choose this option, then North America from the dropdown list, and the password emailled to you from the sign-up. The following menu instructions will demonstrate.</p>
 
 <p>Avoid using a Yaesu DR1X or DR2X as you will not achieve the benefit of the Repeater Configuration of the software, unless you disable the onboard hardware of the repeater. This will defeat the Digital repeater, leaving it on FM Analog only. If you wish to retain the digital mode, then run svxlink as simplex, but you will need to learn more about the settings.</p>
 
