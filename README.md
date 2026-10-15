@@ -49,7 +49,8 @@ We are a Single Channel Node here.
 Confirmation of the platform.
 ![Platform Confirmation ](images/3.jpg)
 
-Adding the i2c and Sound Card, that are on the Main Board.
+Adding the i2c and Sound Card, that are on the Main Board. If they are already in black then click continue.
+
 ![This screen may already be in black rather than in red in which case click continue](images/4.jpg)
 ![In the event is is not the click 'reboot'](images/5.jpg)
 
