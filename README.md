@@ -2,11 +2,12 @@
 ![The NanoPi-Neo Repeater Controller](images/nanopi-neo.jpeg)
 
 **Thanks to Tobias Blömberg SM0SVX for the SvxLink Software now on version 26.05.2 with several security updates.**
+
 ![](images/logo.png)
 
 The image associated with this repository is found in 'Releases' on the right of this page. Simply download the image and install it on a 16 Gb microSD card using Armbian Imager and the option **Custom Image**.
 
-**https://github.com/f5vmr/svx-nanopi/releases/download/V26.05.1_Armbian/nanopi_neo_svxlink.img.gz
+https://github.com/f5vmr/svx-nanopi/releases/download/V26.05.1_Armbian/nanopi_neo_svxlink.img.gz
 
 
 
